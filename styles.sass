@@ -1,0 +1,125 @@
+$default-bg-color: white
+$header-bg-color: $default-bg-color
+$main-bg-color: $default-bg-color
+$footer-bg-color: $default-bg-color
+$nav-bg-color: $default-bg-color
+$link-bg-color: $default-bg-color
+$text-color: black
+$a-color: black
+$a-hover-color: darkred
+$label-a-hover-bg-color: $default-bg-color
+
+body
+    background-color: grey
+    background-size: 100vw
+    color: $text-color
+    display: flex
+    flex-direction: column
+    padding: 0 0
+    margin: 0
+    padding-bottom: 80px
+    > header
+        margin: 0
+        background-color: $header-bg-color
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        h1  
+            all: unset
+            font-size: 7vw
+        picture source
+            width: 10vw
+        picture img
+            width: 10vw
+        .barnav
+            display: none
+
+
+h2
+    padding-left: 5%
+
+h3
+    padding-left: 5%
+
+.title
+    display: block
+
+main
+    background-color: $main-bg-color
+    p
+        padding-left: 10%
+
+footer
+    background-color: $footer-bg-color
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-evenly
+
+nav
+    background-color: $nav-bg-color
+
+ul
+    list-style-type: none
+
+a 
+    color: $a-color
+    text-decoration: none
+    text-rendering: geometricPrecision
+    transition: transform .3s cubic-bezier(0.55, 0, 0.55, 0.2) , color .3s cubic-bezier(0.55, 0, 0.55, 0.2)
+    transform-origin: 50% 30%
+    &:hover
+        color: $a-hover-color
+
+.mobile-footer-nav
+    display: block
+    position: fixed
+    bottom: 0
+    left: 0  
+    width: 100%
+    z-index: 2 
+    flex-grow: 1
+    ul
+        display: flex
+        justify-content: space-evenly
+        padding: 20px 8px
+
+.desktop-footer-nav
+    display: none
+
+.sources
+    display: none
+
+@media screen and (min-width: 900px)
+    body
+        align-items: center
+        > header
+            position: sticky
+            top: 0
+            z-index: 2
+            width: 100%
+            box-shadow: 0px 1px 3px
+            .barnav
+                display: block
+                flex-grow: 1
+                ul
+                    display: flex
+                    justify-content: space-evenly
+                    padding: 20px 8px
+    
+    main
+        width: 100%
+        z-index: 1
+    
+    footer
+        z-index: 1
+        width: 100%
+
+    .desktop-footer-nav
+        display: block
+
+    .sources
+        display: block
+
+    .mobile-footer-nav
+        display: none
