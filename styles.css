@@ -1,3 +1,16 @@
+button {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #050A14;
+}
+button > img {
+  filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
+}
+
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   font-weight: 400;
@@ -51,6 +64,9 @@ body > header > img {
   width: 20px;
   filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
 }
+body > header > button {
+  display: none;
+}
 body > header .desktop-barnav {
   display: none;
 }
@@ -81,6 +97,15 @@ h3 {
   padding-left: 5%;
 }
 
+a {
+  all: unset;
+  color: #E6EEF5;
+}
+a:hover {
+  color: #BFD4E6;
+  cursor: pointer;
+}
+
 .title {
   display: block;
 }
@@ -102,19 +127,6 @@ nav {
 
 ul {
   list-style-type: none;
-}
-
-button {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 0;
-  border: none;
-  background: none;
-  color: #050A14;
-}
-button > img {
-  filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
 }
 
 .mobile-footer-nav {
@@ -152,6 +164,20 @@ button > img {
   }
 }
 @media screen and (min-width: 900px) {
+  button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #BFD4E6;
+    color: #050A14;
+    border-radius: 6px;
+    box-shadow: 0px 4px 0px #1C3B52;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #1C3B52;
+    box-shadow: 0px 4px 0px #0B1B2B;
+    color: #E6EEF5;
+  }
   body {
     align-items: center;
     padding-bottom: 0px;
@@ -170,21 +196,27 @@ button > img {
     display: flex;
   }
   body > header input {
-    width: 225px;
+    width: 20vw;
+    max-width: 300px;
+    top: 15px;
+    right: 50px;
   }
-  button {
-    margin-left: 20px;
-    padding: 10px 20px;
-    background-color: #BFD4E6;
-    color: #050A14;
-    border-radius: 6px;
-    box-shadow: 0px 4px 0px #1C3B52;
+  body > header > img {
+    top: 25px;
+    right: 55px;
   }
-  button:hover {
-    cursor: pointer;
-    background-color: #1C3B52;
-    box-shadow: 0px 4px 0px #0B1B2B;
-    color: #E6EEF5;
+  body > header > button {
+    display: block;
+    all: unset;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 20px;
+  }
+  body > header > button:hover {
+    background: none;
+    box-shadow: none;
+    filter: brightness(150%);
   }
   main {
     width: 100%;
