@@ -1,32 +1,76 @@
 body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: grey;
   background-size: 100vw;
-  color: black;
+  color: #BFD4E6;
   display: flex;
   flex-direction: column;
   padding: 0 0;
   margin: 0;
-  padding-bottom: 80px;
+  padding-bottom: 145px;
 }
 body > header {
   margin: 0;
-  background-color: white;
+  background-color: #050A14;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
-body > header h1 {
-  all: unset;
-  font-size: 7vw;
+body > header a {
+  display: flex;
+  align-items: center;
+  color: #E6EEF5;
+  text-decoration: none;
+  text-rendering: geometricPrecision;
 }
-body > header picture source {
-  width: 10vw;
+body > header a picture source {
+  width: 4rem;
 }
-body > header picture img {
-  width: 10vw;
+body > header a picture img {
+  width: 4rem;
 }
-body > header .barnav {
+body > header input {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 30vw;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1C3B52;
+  color: #BFD4E6;
+}
+body > header > img {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  width: 20px;
+  filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
+}
+body > header .desktop-barnav {
   display: none;
+}
+
+::-moz-placeholder {
+  color: #BFD4E6;
+}
+
+::placeholder {
+  color: #BFD4E6;
+}
+
+h1 {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  all: unset;
+  font-size: 5.7vw;
+  color: #BFD4E6;
 }
 
 h2 {
@@ -42,37 +86,35 @@ h3 {
 }
 
 main {
-  background-color: white;
+  background-color: #050A14;
 }
 main p {
   padding-left: 10%;
 }
 
 footer {
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  background-color: #050A14;
 }
 
 nav {
-  background-color: white;
+  background-color: #050A14;
 }
 
 ul {
   list-style-type: none;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  text-rendering: geometricPrecision;
-  transition: transform 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), color 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
-  transform-origin: 50% 30%;
+button {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #050A14;
 }
-a:hover {
-  color: darkred;
+button > img {
+  filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
 }
 
 .mobile-footer-nav {
@@ -83,11 +125,17 @@ a:hover {
   width: 100%;
   z-index: 2;
   flex-grow: 1;
+  box-shadow: 0px 1px 3px;
 }
 .mobile-footer-nav ul {
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 8px;
+  padding-top: 5px;
+  padding-left: 8px;
+  align-items: flex-end;
+}
+.mobile-footer-nav p {
+  color: #BFD4E6;
 }
 
 .desktop-footer-nav {
@@ -98,36 +146,63 @@ a:hover {
   display: none;
 }
 
+@media screen and (min-width: 550px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
 @media screen and (min-width: 900px) {
   body {
     align-items: center;
+    padding-bottom: 0px;
   }
   body > header {
     position: sticky;
     top: 0;
     z-index: 2;
     width: 100%;
-    box-shadow: 0px 1px 3px;
+    box-shadow: 0px 0px 3px;
   }
-  body > header .barnav {
+  body > header .desktop-barnav {
     display: block;
-    flex-grow: 1;
   }
-  body > header .barnav ul {
+  body > header .desktop-barnav ul {
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px 8px;
+  }
+  body > header input {
+    width: 225px;
+  }
+  button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #BFD4E6;
+    color: #050A14;
+    border-radius: 6px;
+    box-shadow: 0px 4px 0px #1C3B52;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #1C3B52;
+    box-shadow: 0px 4px 0px #0B1B2B;
+    color: #E6EEF5;
   }
   main {
     width: 100%;
     z-index: 1;
   }
   footer {
+    display: flex;
+    justify-content: center;
     z-index: 1;
     width: 100%;
   }
   .desktop-footer-nav {
     display: block;
+  }
+  .desktop-footer-nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
   .sources {
     display: block;
