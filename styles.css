@@ -75,6 +75,9 @@ body > header > img {
   filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
   pointer-events: none;
 }
+body > header > button {
+  display: none;
+}
 body > header .desktop-barnav {
   display: none;
 }
