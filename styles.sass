@@ -135,6 +135,15 @@ body
                 width: 4rem
             picture img
                 width: 4rem
+        label
+            border: 0
+            clip: rect(0 0 0 0)
+            height: 1px
+            margin: -1px
+            overflow: hidden
+            padding: 0
+            position: absolute
+            width: 1px
         input
             @include atkinson-hyperlegible-regular
             position: absolute
@@ -277,6 +286,17 @@ ul
                     background: none
                     box-shadow: none
                     filter: brightness(150%)
+                > p                
+                    position: absolute
+                    width: 1px
+                    height: 1px
+                    padding: 0
+                    margin: -1px
+                    overflow: hidden
+                    clip: rect(0, 0, 0, 0)
+                    border: 0
+                    white-space: nowrap
+
      
     main
         width: 100%
