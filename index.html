@@ -11,6 +11,8 @@
     
     <link rel="stylesheet" href="../styles.css">
     
+    <script src="tab-management.js" defer></script>
+
     <title>VILLANOVA</title>
     
 </head>
@@ -27,9 +29,10 @@
         </a>
         <nav class="desktop-barnav">
             <ul>
-                <li><button>Événements</button></li>
-                <li><button>Où sortir?</button></li>
-                <li><button>Contact</button></li>
+                <li><button class="tablink" onclick="openTab(event,'home')">Accueil</button></li>
+                <li><button class="tablink" onclick="openTab(event,'events')">Événements</button></li>
+                <li><button class="tablink" onclick="openTab(event,'places')">Où sortir?</button></li>
+                <li><button class="tablink"onclick="openTab(event,'contact')">Contact</button></li>
             </ul>
         </nav>
         <form>
@@ -39,9 +42,11 @@
         <img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/>
         <button><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Changement de mode d'affichage</p></button>
     </header>
-    <main>
+    <main id="home" loading="lazy">
+    </main>
+    <main id="events" loading="lazy" style="display:none">
         <header>
-            <h2 id="tab-title" tabindex="0">Titre de l'onglet</h2>
+            <h2 id="tab-title" tabindex="0">Événements</h2>
             <div aria-label="Filtres"></div>
         </header>
         <section aria-label="Contenu de l'onglet" tabindex="0">
@@ -49,34 +54,25 @@
                 <img>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
             </article>
+        </section>
+    </main>
+    <main id="places" loading="lazy" style="display:none">
+        <header>
+            <h2 id="tab-title" tabindex="0">Où sortir</h2>
+            <div aria-label="Filtres"></div>
+        </header>
+        <section aria-label="Contenu de l'onglet" tabindex="0">
             <article tabindex="0">
                 <img>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
             </article>
-            <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
-            </article>
-            <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
-            </article>
-            <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
-            </article>
-            <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
-            </article>
-            <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
-            </article>
-            <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
-            </article>
+        </section>
+    </main>
+    <main id="contact" loading="lazy" style="display:none">
+        <header>
+            <h2 id="tab-title" tabindex="0">Contact</h2>
+        </header>
+        <section aria-label="Contenu de l'onglet" tabindex="0">
             <article tabindex="0">
                 <img>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>

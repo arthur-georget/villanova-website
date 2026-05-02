@@ -123,12 +123,24 @@ a:hover {
 
 main {
   background-color: #050A14;
+  position: relative;
+  animation: animatebottom 0.4s;
 }
 main p {
   padding-left: 10vw;
   padding-right: 10vw;
 }
 
+@keyframes animatebottom {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
 footer {
   background-color: #050A14;
 }
@@ -174,6 +186,11 @@ ul {
   display: none;
 }
 
+.selected-tab {
+  background-color: #1C3B52;
+  color: #E6EEF5;
+}
+
 @media screen and (min-width: 550px) {
   h1 {
     font-size: 2rem;
@@ -212,8 +229,7 @@ ul {
     display: flex;
   }
   body > header input {
-    width: 20vw;
-    max-width: 300px;
+    width: 13vw;
     top: 15px;
     right: 50px;
   }
@@ -271,5 +287,11 @@ ul {
   }
   .mobile-footer-nav {
     display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body > header input {
+    width: 20vw;
+    max-width: 300px;
   }
 }/*# sourceMappingURL=styles.css.map */

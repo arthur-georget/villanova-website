@@ -194,10 +194,20 @@ a
 
 main
     background-color: $main-bg-color
+    position: relative
+    animation: animatebottom 0.4s
     p
         padding-left: 10vw
         padding-right: 10vw
-
+    
+@keyframes animatebottom
+    from
+        left:-300px
+        opacity:0
+    to
+        left:0
+        opacity:1
+    
 footer
     background-color: $footer-bg-color
 
@@ -234,6 +244,10 @@ ul
 .sources
     display: none
 
+.selected-tab
+    background-color: $buttons-hover-bg-color
+    color: $buttons-hover-text-color
+
 @media screen and (min-width: 550px)
     h1
         font-size: 2rem                
@@ -266,8 +280,7 @@ ul
                 ul
                     display: flex
             input
-                width: 20vw
-                max-width: 300px 
+                width: 13vw
                 top: 15px
                 right: 50px
             > img
@@ -321,3 +334,10 @@ ul
 
     .mobile-footer-nav
         display: none
+
+@media screen and (min-width: 1000px)
+    body
+        > header
+            input
+                width: 20vw
+                max-width: 300px
