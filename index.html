@@ -29,10 +29,10 @@
         </a>
         <nav class="desktop-barnav">
             <ul>
-                <li><button class="tablink" onclick="openTab(event,'home')">Accueil</button></li>
-                <li><button class="tablink" onclick="openTab(event,'events')">Événements</button></li>
-                <li><button class="tablink" onclick="openTab(event,'places')">Où sortir?</button></li>
-                <li><button class="tablink"onclick="openTab(event,'contact')">Contact</button></li>
+                <li><button class="tab-link home-button selected-tab" onclick="openTab(event,'home')">Accueil</button></li>
+                <li><button class="tab-link events-button" onclick="openTab(event,'events')">Événements</button></li>
+                <li><button class="tab-link places-button" onclick="openTab(event,'places')">Où sortir?</button></li>
+                <li><button class="tab-link contact-button"onclick="openTab(event,'contact')">Contact</button></li>
             </ul>
         </nav>
         <form>
@@ -82,18 +82,19 @@
     <footer>
         <nav class="mobile-footer-nav">
             <ul>
-                <li><button><img src="/assets/icons/home.svg" alt="Logo accueil"/><p>Accueil</p></button></li>
-                <li><button><img src="/assets/icons/calendar.svg" alt="Logo calendrier"/><p>Événements</p></button></li>
-                <li><button><img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
-                <li><button><img src="/assets/icons/location.svg" alt="Logo point de localisation"/><p>Où sortir</p></button></li>
+                <li><button class="tab-link home-button selected-tab" onclick="openTab(event,'home')"><img src="/assets/icons/home.svg" alt="Logo accueil"/><p>Accueil</p></button></li>
+                <li><button class="tab-link events-button" onclick="openTab(event,'events')"><img src="/assets/icons/calendar.svg" alt="Logo calendrier"/><p>Événements</p></button></li>
+                <li><button class="tab-link places-button" onclick="openTab(event,'places')"><img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
+                <li><button class="tab-link contact-button"onclick="openTab(event,'contact')"><img src="/assets/icons/location.svg" alt="Logo point de localisation"/><p>Où sortir</p></button></li>
                 <li><button><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Affichage</p></button></li>
             </ul>
         </nav>
         <nav class="desktop-footer-nav">
             <ul>
-                <li><button>Événements</button></li>
-                <li><button>Où sortir?</button></li>
-                <li><button>Contact</button></li>
+                <li><button class="tab-link home-button selected-tab" onclick="openTab(event,'home')">Accueil</button></li>
+                <li><button class="tab-link events-button" onclick="openTab(event,'events')">Événements</button></li>
+                <li><button class="tab-link places-button" onclick="openTab(event,'places')">Où sortir?</button></li>
+                <li><button class="tab-link contact-button"onclick="openTab(event,'contact')">Contact</button></li>
             </ul>
         </nav>
         <nav class="sources">

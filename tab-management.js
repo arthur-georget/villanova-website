@@ -1,13 +1,16 @@
 function openTab(event, tabName) {
-    let i, x, tablinks;
+    let i, x, tabLinks, selectedTabLinks;
     x = document.getElementsByTagName("main");
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" selected-tab", "");
+    tabLinks = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" selected-tab", "");
     }
     document.getElementById(tabName).style.display = "block";
-    event.currentTarget.className += " selected-tab";
+    selectedTabLinks = document.getElementsByClassName(`${tabName}-button`);
+    for (i=0; i< selectedTabLinks.length; i++) {
+        selectedTabLinks[i].className += " selected-tab";
+    }
 }

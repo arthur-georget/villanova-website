@@ -6,6 +6,8 @@ button {
   border: none;
   background: none;
   color: #050A14;
+  border-radius: 6px;
+  padding: 5px 10px;
 }
 button > img {
   filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
@@ -189,6 +191,7 @@ ul {
 .selected-tab {
   background-color: #1C3B52;
   color: #E6EEF5;
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 550px) {
