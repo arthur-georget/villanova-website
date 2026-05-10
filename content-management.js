@@ -3,10 +3,16 @@ const AGENDA_ID = '1854436';
 let data;
 let isLoading = false;
 
-async function requestEvents(after="") {
+async function requestEvents(after="", search="") {
+    const EVENTS_SECTION = document.getElementById('events-section');
+
     if (isLoading) return;
     isLoading = true;
     let target_url = `https://corsproxy.io/https://api.openagenda.com/v2/agendas/${AGENDA_ID}/events?size=10&relative[]=current&relative[]=upcoming`;
+    if (search){
+        EVENTS_SECTION.textContent = "";
+        target_url += `&search=${encodeURIComponent(search)}`;
+    }
     if (after && Array.isArray(after)) {
         after.forEach((value) => {
             target_url += `&after[]=${encodeURIComponent(value)}`;
@@ -18,7 +24,6 @@ async function requestEvents(after="") {
         }
     });
 
-    const EVENTS_SECTION = document.getElementById('events-section');
     const DATA = await RESPONSE.json();
     const EVENTS = DATA.events || [];
     console.log(DATA);
@@ -57,11 +62,16 @@ async function requestEvents(after="") {
     return DATA;
 }
 
-async function requestPlaces(after="") {
+async function requestPlaces(after="", search="") {
+    const PLACES_SECTION = document.getElementById('places-section');
     if (isLoading) return;
     isLoading = true;
     let target_url = `https://corsproxy.io/https://api.openagenda.com/v2/agendas/${AGENDA_ID}/locations?size=10&relative[]=current&relative[]=upcoming`;
-    if (after) {
+    if (search){
+        PLACES_SECTION.textContent = "";
+        target_url += `&search=${encodeURIComponent(search)}`;
+    }
+    if (after){
         target_url += `&after=${encodeURIComponent(after)}`;
     }
     const RESPONSE = await fetch(target_url, {
@@ -70,7 +80,6 @@ async function requestPlaces(after="") {
         }
     });
 
-    const PLACES_SECTION = document.getElementById('places-section');
     const DATA = await RESPONSE.json();
     const PLACES = DATA.locations || [];
     console.log(DATA);
@@ -113,3 +122,24 @@ window.onscroll = function(event) {
         }
     }
 };
+
+const searchForm = document.getElementById("searchForm");
+
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const SAFETY_REGEX = /^(?![^{}<>]*[{}<>])[^]{1,50}$/;
+    const SEARCH_INPUT = document.getElementById("internalSearch");
+
+    if (!SAFETY_REGEX.test(SEARCH_INPUT.value)){
+        SEARCH_INPUT.value = "";
+        SEARCH_INPUT.setAttribute("placeholder", "{} et <> interdits!");
+    } else {
+        SEARCH_INPUT.setAttribute("placeholder", "Rechercher");
+        if (document.getElementById("events").style.display == "block"){
+            data = requestEvents("",SEARCH_INPUT.value);
+        } else if (document.getElementById("places").style.display == "block"){
+            data = requestPlaces("",SEARCH_INPUT.value);
+        }
+    }
+});
