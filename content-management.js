@@ -39,7 +39,6 @@ async function requestEvents(after="", search="") {
         const IMAGE = document.createElement("IMG");
         IMAGE.setAttribute("src", `${event.image.base}${event.image.filename}`);
         IMAGE.setAttribute("width", "304");
-        IMAGE.setAttribute("height", "228");
         IMAGE.setAttribute("alt", `Illustration de ${event.title['fr']}`);
         
         const DATE_RANGE = document.createElement("p");

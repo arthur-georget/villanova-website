@@ -182,7 +182,10 @@ h2
     padding-left: 5%
 
 h3
-    padding-left: 5%
+    width: 100%
+
+p
+    width: 100%
 
 a
     text-decoration-line: none
@@ -198,9 +201,6 @@ main
     background-color: $main-bg-color
     position: relative
     animation: animatebottom 0.4s
-    p
-        padding-left: 10vw
-        padding-right: 10vw
     
 @keyframes animatebottom
     from
@@ -209,7 +209,16 @@ main
     to
         left:0
         opacity:1
-    
+
+section
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+
+article
+    margin: 5vw
+    width: 300px
+
 footer
     background-color: $footer-bg-color
 
