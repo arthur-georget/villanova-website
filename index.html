@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../styles.css">
-    
+
     <script src="content-management.js" defer></script>
     <script src="tab-management.js" defer></script>
 
@@ -79,7 +79,7 @@
             <ul>
                 <li><button class="tab-link home-button selected-tab" onclick="openTab(event,'home')"><img src="/assets/icons/home.svg" alt="Logo accueil"/><p>Accueil</p></button></li>
                 <li><button class="tab-link events-button" onclick="openTab(event,'events')"><img src="/assets/icons/calendar.svg" alt="Logo calendrier"/><p>Événements</p></button></li>
-                <li><button class="tab-link search-button" onclick="console.log(`Focus sur l'onglet de recherche`)"><img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
+                <li><button class="tab-link search-button" onclick="searchFocus(event)"><img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
                 <li><button class="tab-link places-button"onclick="openTab(event,'places')"><img src="/assets/icons/location.svg" alt="Logo point de localisation"/><p>Où sortir</p></button></li>
                 <li><button><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Affichage</p></button></li>
             </ul>

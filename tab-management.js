@@ -19,3 +19,12 @@ function openTab(event, tabName) {
         selectedTabLinks[i].className += " selected-tab";
     }
 }
+
+function searchFocus(event){
+    tabLinks = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" selected-tab", "");
+    }
+    document.getElementsByClassName("search-button")[0].className += " selected-tab";
+    document.getElementById("internalSearch").focus();
+}
