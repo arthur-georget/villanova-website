@@ -57,14 +57,56 @@ async function requestEvents(after="") {
     return DATA;
 }
 
-data = requestEvents();
+async function requestPlaces(after="") {
+    if (isLoading) return;
+    isLoading = true;
+    let target_url = `https://corsproxy.io/https://api.openagenda.com/v2/agendas/${AGENDA_ID}/locations?size=10&relative[]=current&relative[]=upcoming`;
+    if (after) {
+        target_url += `&after=${encodeURIComponent(after)}`;
+    }
+    const RESPONSE = await fetch(target_url, {
+        headers: {
+            'key': PUBLIC_KEY
+        }
+    });
+
+    const PLACES_SECTION = document.getElementById('places-section');
+    const DATA = await RESPONSE.json();
+    const PLACES = DATA.locations || [];
+    console.log(DATA);
+
+    PLACES.forEach(place => {
+        const PLACE = document.createElement("article");
+        PLACE.setAttribute("tabindex", "0");
+        
+        const PLACE_NAME = document.createElement("h3");
+        const PLACE_NAME_CONTENT = document.createTextNode(place.name);
+        PLACE_NAME.appendChild(PLACE_NAME_CONTENT);
+
+        const ADDRESS = document.createElement("p");
+        const ADDRESS_CONTENT = document.createTextNode(place.address);
+        ADDRESS.appendChild(ADDRESS_CONTENT);
+        
+        PLACE.appendChild(PLACE_NAME);
+        PLACE.appendChild(ADDRESS);
+
+        PLACES_SECTION.appendChild(PLACE);
+    });
+    
+    isLoading = false;
+    return DATA;
+}
 
 window.onscroll = function(event) {
     if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 100)) {
         if (data && !isLoading) {
             data = data.then(value => {
-                if (value.after && Array.isArray(value.after)) {
-                    return requestEvents(value.after); 
+                if (value.after ) {
+                    if (document.getElementById("events").style.display == "block" && Array.isArray(value.after)){
+                        return requestEvents(value.after); 
+                    } else if (document.getElementById("places").style.display == "block"){
+                        return requestPlaces(value.after);
+                    }
                 }
                 return value;
             });

@@ -11,8 +11,8 @@
     
     <link rel="stylesheet" href="../styles.css">
     
-    <script src="tab-management.js" defer></script>
     <script src="content-management.js" defer></script>
+    <script src="tab-management.js" defer></script>
 
     <title>VILLANOVA</title>
     
@@ -59,11 +59,8 @@
             <h2 id="tab-title" tabindex="0">Où sortir</h2>
             <div aria-label="Filtres"></div>
         </header>
-        <section aria-label="Contenu de l'onglet" tabindex="0">
-            <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
-            </article>
+        <section id="places-section" aria-label="Contenu de l'onglet" tabindex="0">
+
         </section>
     </main>
     <main id="contact" loading="lazy" style="display:none">
@@ -82,8 +79,8 @@
             <ul>
                 <li><button class="tab-link home-button selected-tab" onclick="openTab(event,'home')"><img src="/assets/icons/home.svg" alt="Logo accueil"/><p>Accueil</p></button></li>
                 <li><button class="tab-link events-button" onclick="openTab(event,'events')"><img src="/assets/icons/calendar.svg" alt="Logo calendrier"/><p>Événements</p></button></li>
-                <li><button class="tab-link places-button" onclick="openTab(event,'places')"><img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
-                <li><button class="tab-link contact-button"onclick="openTab(event,'contact')"><img src="/assets/icons/location.svg" alt="Logo point de localisation"/><p>Où sortir</p></button></li>
+                <li><button class="tab-link search-button" onclick="console.log(`Focus sur l'onglet de recherche`)"><img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
+                <li><button class="tab-link places-button"onclick="openTab(event,'places')"><img src="/assets/icons/location.svg" alt="Logo point de localisation"/><p>Où sortir</p></button></li>
                 <li><button><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Affichage</p></button></li>
             </ul>
         </nav>
