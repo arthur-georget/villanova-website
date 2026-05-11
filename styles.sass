@@ -140,26 +140,13 @@ body
                 width: 4rem
             picture img
                 width: 4rem
-        label
-            border: 0
-            clip: rect(0 0 0 0)
-            height: 1px
-            margin: -1px
-            overflow: hidden
-            padding: 0
-            position: absolute
-            width: 1px
         input
             @include atkinson-hyperlegible-regular
             position: absolute
             top: 15px
             right: 10px
             width: 30vw
-            padding: 10px
-            border-radius: 6px
-            border: none
-            background-color: $input-bg-color
-            color: $text-color
+            
         > img
             position: absolute
             top: 25px
@@ -260,7 +247,41 @@ section
         p
             width: 40vw
 
+        > form
+            width: 50vw
+            input
+                width: 45vw
+            textarea
+                width: 45vw
 
+label
+    border: 0
+    clip: rect(0 0 0 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
+
+input
+    padding: 10px
+    border-radius: 6px
+    border: none
+    background-color: $input-bg-color
+    color: $text-color
+
+textarea
+    @include atkinson-hyperlegible-regular
+    padding: 10px
+    border-radius: 6px
+    border: none
+    background-color: $input-bg-color
+    color: $text-color
+
+#sendMessage
+    &:hover
+        cursor: pointer
 
 footer
     background-color: $footer-bg-color

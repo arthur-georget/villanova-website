@@ -77,8 +77,17 @@
         </header>
         <section aria-label="Contenu de l'onglet" tabindex="0">
             <article tabindex="0">
-                <img>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa earum animi, praesentium aut, commodi eos voluptates modi rerum dicta tempore excepturi enim optio alias a provident? Minus, assumenda nesciunt?</p>
+                <form id="newAccountForm">
+                    <label for="userFirstName">Prénom</label>
+                    <input type="text" id="userFirstName" name="userFirstName" placeholder="Prénom" required><br><br>
+                    <label for="userLastName">Nom</label>
+                    <input type="text" id="userLastName" name="userLastName" placeholder="Nom de famille" required><br><br>
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Email" required><br><br>
+                    <label for="mailContent">Contenu du mail à envoyer</label>
+                    <textarea id="mailContent" placeholder="Tapez ici le message à envoyer"></textarea><br><br>
+                    <input type="submit" id="sendMessage" value="Envoyer">
+                </form>
             </article>
         </section>
     </main>

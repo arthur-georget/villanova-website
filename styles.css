@@ -45,16 +45,6 @@ body > header a picture source {
 body > header a picture img {
   width: 4rem;
 }
-body > header label {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
 body > header input {
   font-family: "Atkinson Hyperlegible", sans-serif;
   font-weight: 400;
@@ -63,11 +53,6 @@ body > header input {
   top: 15px;
   right: 10px;
   width: 30vw;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  background-color: #1C3B52;
-  color: #BFD4E6;
 }
 body > header > img {
   position: absolute;
@@ -196,6 +181,49 @@ section > article {
 }
 section > article p {
   width: 40vw;
+}
+section > article > form {
+  width: 50vw;
+}
+section > article > form input {
+  width: 45vw;
+}
+section > article > form textarea {
+  width: 45vw;
+}
+
+label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1C3B52;
+  color: #BFD4E6;
+}
+
+textarea {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1C3B52;
+  color: #BFD4E6;
+}
+
+#sendMessage:hover {
+  cursor: pointer;
 }
 
 footer {
