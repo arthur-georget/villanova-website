@@ -106,10 +106,6 @@ h2 {
   padding-left: 5%;
 }
 
-h3 {
-  padding-left: 5%;
-}
-
 a {
   text-decoration-line: none;
   color: #E6EEF5;
@@ -178,11 +174,28 @@ section > button {
   background: none;
   box-shadow: none;
 }
-
-article {
+section > button > article {
   color: #BFD4E6;
   margin: 5vw;
   width: 300px;
+}
+section > button > article h3 {
+  padding-left: 5%;
+}
+section > img {
+  width: 60vw;
+}
+section > article {
+  position: relative;
+  top: -5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vw;
+  background-color: #0B1B2B;
+}
+section > article p {
+  width: 40vw;
 }
 
 footer {
