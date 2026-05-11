@@ -127,6 +127,34 @@ main {
   background-color: #050A14;
   position: relative;
   animation: animatebottom 0.4s;
+  display: flex;
+}
+main > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.85;
+  z-index: 2;
+}
+main > article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+main > article > button {
+  position: absolute;
+  background: none;
+  border: none;
+  box-shadow: none;
+  top: 0;
+  right: 0;
+}
+main > article > button > img {
+  filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
 }
 
 @keyframes animatebottom {
