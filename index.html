@@ -11,9 +11,10 @@
     
     <link rel="stylesheet" href="../styles.css">
 
+    <script src="display-management.js" defer></script>
     <script src="content-management.js" defer></script>
     <script src="tab-management.js" defer></script>
-
+    
     <title>VILLANOVA</title>
     
 </head>
@@ -41,7 +42,7 @@
             <label for="internalSearch">Rechercher sur Villanova</label>
         </form>
         <img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/>
-        <button><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Changement de mode d'affichage</p></button>
+        <button onclick="toggleView()"><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Changement de mode d'affichage</p></button>
     </header>
     <main id="home" loading="lazy">
     </main>

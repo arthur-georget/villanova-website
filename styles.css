@@ -128,10 +128,6 @@ main {
   position: relative;
   animation: animatebottom 0.4s;
 }
-main p {
-  padding-left: 10vw;
-  padding-right: 10vw;
-}
 
 @keyframes animatebottom {
   from {
@@ -143,6 +139,24 @@ main p {
     opacity: 1;
   }
 }
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+section > button {
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+article {
+  color: #BFD4E6;
+  margin: 5vw;
+  width: 300px;
+}
+
 footer {
   background-color: #050A14;
 }
@@ -161,7 +175,7 @@ ul {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 5;
   flex-grow: 1;
   box-shadow: 0px 1px 3px;
 }
