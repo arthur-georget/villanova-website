@@ -24,6 +24,7 @@ $buttons-text-color: null
 $buttons-hover-bg-color: null
 $buttons-hover-shadow-color: null
 $buttons-hover-text-color: null
+$home-article-background-color: null
 $text-color: null
 $a-color: null
 $a-hover-color: null
@@ -44,6 +45,7 @@ $dark: true
     $buttons-hover-bg-color: $light-stl-blue
     $buttons-hover-shadow-color: $darkest-stl-blue
     $buttons-hover-text-color: $off-white
+    $home-article-background-color: $darkest-stl-blue
     $text-color: $light-cyan
     $a-color: $off-white
     $a-hover-color: $light-cyan
@@ -62,6 +64,7 @@ $dark: true
     $buttons-hover-bg-color: $stl-blue
     $buttons-hover-shadow-color: $darkest-stl-blue
     $buttons-hover-text-color: $light-cyan
+    $home-article-background-color: $light-cyan
     $text-color: $off-black
     $a-color: $off-black
     $a-hover-color: $dark-stl-blue
@@ -181,12 +184,6 @@ h1
 h2
     padding-left: 5%
 
-h3
-    width: 100%
-
-p
-    width: 100%
-
 a
     text-decoration-line: none
     color: $a-color
@@ -201,7 +198,31 @@ main
     background-color: $main-bg-color
     position: relative
     animation: animatebottom 0.4s
-    
+    display: flex
+    > div
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: black
+        opacity: 0.85
+        z-index: 2
+    > article
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 3
+        > button
+            position: absolute
+            background: none
+            border: none
+            box-shadow: none
+            top: 0
+            right: 0
+            > img
+                filter: $icons-bg-color
+
 @keyframes animatebottom
     from
         left:-300px
@@ -214,10 +235,32 @@ section
     display: flex
     flex-wrap: wrap
     justify-content: space-evenly
+    > button
+        padding: 0
+        border: none
+        background: none
+        box-shadow: none
+        > article
+            color: $text-color
+            margin: 5vw
+            width: 300px
+            h3
+                padding-left: 5%
+    > img
+        width: 60vw
+    > article
+        position: relative
+        top: -5vw
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 5vw
+        background-color: $home-article-background-color
+        
+        p
+            width: 40vw
 
-article
-    margin: 5vw
-    width: 300px
+
 
 footer
     background-color: $footer-bg-color
@@ -234,7 +277,7 @@ ul
     bottom: 0
     left: 0  
     width: 100%
-    z-index: 2 
+    z-index: 5
     flex-grow: 1
     box-shadow: 0px 1px 3px
     ul

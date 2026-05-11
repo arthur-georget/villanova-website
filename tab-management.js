@@ -1,4 +1,6 @@
 function openTab(event, tabName) {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     let i, x, tabLinks, selectedTabLinks;
     x = document.getElementsByTagName("main");
     for (i = 0; i < x.length; i++) {
