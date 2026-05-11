@@ -156,9 +156,11 @@ async function requestPlaces(after="", search="") {
     console.log(DATA);
 
     PLACES.forEach(place => {
+        const CLICKABLE_PLACE = document.createElement("button");
+        CLICKABLE_PLACE.setAttribute("tabindex", "0");
         const PLACE = document.createElement("article");
-        PLACE.setAttribute("tabindex", "0");
-        
+        CLICKABLE_PLACE.appendChild(PLACE);
+
         const PLACE_NAME = document.createElement("h3");
         const PLACE_NAME_CONTENT = document.createTextNode(place.name);
         PLACE_NAME.appendChild(PLACE_NAME_CONTENT);
@@ -170,7 +172,7 @@ async function requestPlaces(after="", search="") {
         PLACE.appendChild(PLACE_NAME);
         PLACE.appendChild(ADDRESS);
 
-        PLACES_SECTION.appendChild(PLACE);
+        PLACES_SECTION.appendChild(CLICKABLE_PLACE);
     });
     
     isLoading = false;
