@@ -5,9 +5,6 @@ let data;
 let isLoading = false;
 
 async function showEventInfos(ref_button, event){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-
     let target_url = `https://api.openagenda.com/v2/agendas/${AGENDA_ID}/events/${event.uid}?key=${PUBLIC_KEY}`;
     const RESPONSE = await fetch(target_url);
 
@@ -61,6 +58,9 @@ async function showEventInfos(ref_button, event){
 
     document.getElementById('events').appendChild(CURTAIN);
     document.getElementById('events').appendChild(EVENT);
+    
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 async function requestEvents(after="", search="") {
