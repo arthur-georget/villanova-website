@@ -72,7 +72,7 @@ async function requestEvents(after="", search="") {
 
     if (isLoading) return;
     isLoading = true;
-    let target_url = `https://corsproxy.io/https://api.openagenda.com/v2/agendas/${AGENDA_ID}/events?size=10&relative[]=current&relative[]=upcoming`;
+    let target_url = `https://api.openagenda.com/v2/agendas/${AGENDA_ID}/events?size=10&relative[]=current&relative[]=upcoming&key=${PUBLIC_KEY}`;
     if (search){
         EVENTS_SECTION.textContent = "";
         target_url += `&search=${encodeURIComponent(search)}`;
@@ -82,11 +82,7 @@ async function requestEvents(after="", search="") {
             target_url += `&after[]=${encodeURIComponent(value)}`;
         });
     }
-    const RESPONSE = await fetch(target_url, {
-        headers: {
-            'key': PUBLIC_KEY
-        }
-    });
+    const RESPONSE = await fetch(target_url);
 
     const DATA = await RESPONSE.json();
     const EVENTS = DATA.events || [];
@@ -137,7 +133,7 @@ async function requestPlaces(after="", search="") {
     const PLACES_SECTION = document.getElementById('places-section');
     if (isLoading) return;
     isLoading = true;
-    let target_url = `https://corsproxy.io/https://api.openagenda.com/v2/agendas/${AGENDA_ID}/locations?size=10&relative[]=current&relative[]=upcoming`;
+    let target_url = `https://api.openagenda.com/v2/agendas/${AGENDA_ID}/locations?size=10&relative[]=current&relative[]=upcoming&key=${PUBLIC_KEY}`;
     if (search){
         PLACES_SECTION.textContent = "";
         target_url += `&search=${encodeURIComponent(search)}`;
@@ -145,11 +141,7 @@ async function requestPlaces(after="", search="") {
     if (after){
         target_url += `&after=${encodeURIComponent(after)}`;
     }
-    const RESPONSE = await fetch(target_url, {
-        headers: {
-            'key': PUBLIC_KEY
-        }
-    });
+    const RESPONSE = await fetch(target_url);
 
     const DATA = await RESPONSE.json();
     const PLACES = DATA.locations || [];
