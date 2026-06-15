@@ -8,12 +8,8 @@ async function showEventInfos(ref_button, event){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
-    let target_url = `https://corsproxy.io/https://api.openagenda.com/v2/agendas/${AGENDA_ID}/events/${event.uid}`;
-    const RESPONSE = await fetch(target_url, {
-        headers: {
-            'key': PUBLIC_KEY
-        }
-    });
+    let target_url = `https://api.openagenda.com/v2/agendas/${AGENDA_ID}/events/${event.uid}?key=${PUBLIC_KEY}`;
+    const RESPONSE = await fetch(target_url);
 
     const DATA = await RESPONSE.json();
     console.log(DATA);
