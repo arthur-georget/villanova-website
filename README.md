@@ -3,11 +3,13 @@
 [![Normes WCAG](https://img.shields.io/badge/Accessibility-WCAG%20AA%20Compliant-brightgreen)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 [![HTML](https://shields.io/badge/HTML-f06529?logo=html5&logoColor=white&labelColor=f06529)](HTML)
 [![SASS](https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white)](SASS)
-[![JavaScript](https://img.shields.io/badge/logo-javascript-blue?logo=javascript)](JAVASCRIPT)
+[![JavaScript](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000)](JAVASCRIPT)
 
 **Villanova Website** est une application web moderne permettant de consulter, rechercher et filtrer des événements et des lieux en temps réel. Le site interroge l'API publique d'**OpenAgenda** pour centraliser et afficher l'agenda culturel et associatif.
 
 Ce projet a été réalisé dans le cadre de la validation d'un bloc de compétences du titre **RNCP 37273 : Développeur Web Full Stack**.
+
+![Website Preview](./assets/images/website_screenshot.png)
 
 ---
 
@@ -15,7 +17,7 @@ Ce projet a été réalisé dans le cadre de la validation d'un bloc de compéte
 
 * **Interconnexion API :** Requêtes asynchrones sur l'API d'OpenAgenda.
 * **Moteur de recherche avancé :** Filtrage dynamique par mots-clés, thématiques, dates, et recherche croisée sur les événements et les lieux.
-* **Accessibilité (a11y) :** Site entièrement conforme aux normes **WCAG 2.1 niveau AA** (navigation au clavier, contrastes élevés, balisage sémantique ARIA, compatibilité lecteurs d'écran).
+* **Accessibilité :** Site entièrement conforme aux normes **WCAG 2.1 niveau AA** (navigation au clavier, contrastes élevés, balisage sémantique ARIA, compatibilité lecteurs d'écran).
 * **Design Responsive :** Interface fluide et adaptée à tous les écrans (Desktop, Tablette, Mobile).
 
 ---
@@ -50,11 +52,11 @@ Ouvrez simplement le fichier index.html dans votre navigateur, ou utilisez une e
 ## ♿ Accessibilité (WCAG AA)
 Une attention toute particulière a été portée à l'inclusion et à l'accessibilité numérique :
 
-* ** Navigation au clavier :** Présence de liens d'évitement (skip links), focus visible et gestion rigoureuse du tabindex.
+* **Navigation au clavier :** Présence de liens d'évitement (skip links), focus visible et gestion rigoureuse du tabindex.
 
-* ** Lecteurs d'écran :** Utilisation des rôles, états et propriétés ARIA (aria-expanded, aria-live pour les résultats de recherche dynamiques, etc.).
+* **Lecteurs d'écran :** Utilisation des rôles, états et propriétés ARIA (aria-expanded, aria-live pour les résultats de recherche dynamiques, etc.).
 
-* ** Contrastes :** Ratios de contraste vérifiés et validés selon les critères WCAG AA.
+* **Contrastes :** Ratios de contraste vérifiés et validés selon les critères WCAG AA.
 
 ## 🎓 Contexte Pédagogique
 Ce projet valide un bloc du titre professionnel RNCP 37273 - Développeur Web full stack.
