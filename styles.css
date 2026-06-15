@@ -104,13 +104,13 @@ a:hover {
   display: block;
 }
 
-main {
+.main-section {
   background-color: #050A14;
   position: relative;
   animation: animatebottom 0.4s;
   display: flex;
 }
-main > div {
+.main-section > div {
   position: absolute;
   top: 0;
   left: 0;
@@ -120,13 +120,13 @@ main > div {
   opacity: 0.85;
   z-index: 2;
 }
-main > article {
+.main-section > article {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
 }
-main > article > button {
+.main-section > article > button {
   position: absolute;
   background: none;
   border: none;
@@ -134,7 +134,7 @@ main > article > button {
   top: 0;
   right: 0;
 }
-main > article > button > img {
+.main-section > article > button > img {
   filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
 }
 
@@ -148,29 +148,29 @@ main > article > button > img {
     opacity: 1;
   }
 }
-section {
+section > section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-section > button {
+section > section > button {
   padding: 0;
   border: none;
   background: none;
   box-shadow: none;
 }
-section > button > article {
+section > section > button > article {
   color: #BFD4E6;
   margin: 5vw;
   width: 300px;
 }
-section > button > article h3 {
+section > section > button > article h3 {
   padding-left: 5%;
 }
-section > img {
+section > section > img {
   width: 60vw;
 }
-section > article {
+section > section > article {
   position: relative;
   top: -5vw;
   display: flex;
@@ -179,16 +179,16 @@ section > article {
   padding: 5vw;
   background-color: #0B1B2B;
 }
-section > article p {
+section > section > article p {
   width: 40vw;
 }
-section > article > form {
+section > section > article > form {
   width: 50vw;
 }
-section > article > form input {
+section > section > article > form input {
   width: 45vw;
 }
-section > article > form textarea {
+section > section > article > form textarea {
   width: 45vw;
 }
 
@@ -350,7 +350,7 @@ ul {
     border: 0;
     white-space: nowrap;
   }
-  main {
+  .main-section {
     width: 100%;
     z-index: 1;
   }

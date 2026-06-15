@@ -2,7 +2,7 @@ function openTab(event, tabName) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     let i, x, tabLinks, selectedTabLinks;
-    x = document.getElementsByTagName("main");
+    x = document.getElementsByClassName("main-section");
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }

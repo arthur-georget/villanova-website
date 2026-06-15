@@ -44,51 +44,53 @@
         <img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/>
         <button onclick="toggleView()"><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Changement de mode d'affichage</p></button>
     </header>
-    <main id="home" loading="lazy">
-        <section id="home-section">
-            <img src="/assets/images/accueil.webp" alt="Photo de Villanova.">
-            <article>
-                <h3>Bienvenue sur Villanova!</h3>
-                <p> Le cœur battant de votre ville, en un clic. Que vous soyez un habitant de longue date, un nouvel arrivant ou un voyageur de passage, Villanova a toujours une histoire à vous raconter. Entre ses ruelles pavées baignées de lumière et l'effervescence de ses places ombragées, notre ville ne dort jamais vraiment. Villanova est la plateforme communautaire dédiée à tous ceux qui veulent vivre la ville intensément.</p>
-            </article>
+    <main>
+        <section class="main-section" id="home" loading="lazy">
+            <section id="home-section">
+                <img src="/assets/images/accueil.webp" alt="Photo de Villanova.">
+                <article>
+                    <h3>Bienvenue sur Villanova!</h3>
+                    <p> Le cœur battant de votre ville, en un clic. Que vous soyez un habitant de longue date, un nouvel arrivant ou un voyageur de passage, Villanova a toujours une histoire à vous raconter. Entre ses ruelles pavées baignées de lumière et l'effervescence de ses places ombragées, notre ville ne dort jamais vraiment. Villanova est la plateforme communautaire dédiée à tous ceux qui veulent vivre la ville intensément.</p>
+                </article>
+            </section>
         </section>
-    </main>
-    <main id="events" loading="lazy" style="display:none">
-        <header>
-            <h2 id="tab-title" tabindex="0">Événements</h2>
-            <div aria-label="Filtres"></div>
-        </header>
-        <section id="events-section" aria-label="Contenu de l'onglet" tabindex="0">
-            
+        <section class="main-section" id="events" loading="lazy" style="display:none">
+            <header>
+                <h2 id="tab-title" tabindex="0">Événements</h2>
+                <div aria-label="Filtres"></div>
+            </header>
+            <section id="events-section" aria-label="Contenu de l'onglet" tabindex="0">
+                
+            </section>
         </section>
-    </main>
-    <main id="places" loading="lazy" style="display:none">
-        <header>
-            <h2 id="tab-title" tabindex="0">Où sortir</h2>
-            <div aria-label="Filtres"></div>
-        </header>
-        <section id="places-section" aria-label="Contenu de l'onglet" tabindex="0">
+        <section class="main-section" id="places" loading="lazy" style="display:none">
+            <header>
+                <h2 id="tab-title" tabindex="0">Où sortir</h2>
+                <div aria-label="Filtres"></div>
+            </header>
+            <section id="places-section" aria-label="Contenu de l'onglet" tabindex="0">
 
+            </section>
         </section>
-    </main>
-    <main id="contact" loading="lazy" style="display:none">
-        <header>
-            <h2 id="tab-title" tabindex="0">Contact</h2>
-        </header>
-        <section aria-label="Contenu de l'onglet" tabindex="0">
-            <article tabindex="0">
-                <form id="newAccountForm">
-                    <label for="userFirstName">Prénom</label>
-                    <input type="text" id="userFirstName" name="userFirstName" placeholder="Prénom" required><br><br>
-                    <label for="userLastName">Nom</label>
-                    <input type="text" id="userLastName" name="userLastName" placeholder="Nom de famille" required><br><br>
-                    <label for="userEmail">Email</label>
-                    <input type="email" id="userEmail" name="userEmail" placeholder="Email" required><br><br>
-                    <label for="mailContent">Contenu du mail à envoyer</label>
-                    <textarea id="mailContent" placeholder="Tapez ici le message à envoyer"></textarea><br><br>
-                    <input type="submit" id="sendMessage" value="Envoyer">
-                </form>
-            </article>
+        <section class="main-section" id="contact" loading="lazy" style="display:none">
+            <header>
+                <h2 id="tab-title" tabindex="0">Contact</h2>
+            </header>
+            <section aria-label="Contenu de l'onglet" tabindex="0">
+                <article tabindex="0">
+                    <form id="newAccountForm">
+                        <label for="userFirstName">Prénom</label>
+                        <input type="text" id="userFirstName" name="userFirstName" placeholder="Prénom" required><br><br>
+                        <label for="userLastName">Nom</label>
+                        <input type="text" id="userLastName" name="userLastName" placeholder="Nom de famille" required><br><br>
+                        <label for="userEmail">Email</label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="Email" required><br><br>
+                        <label for="mailContent">Contenu du mail à envoyer</label>
+                        <textarea id="mailContent" placeholder="Tapez ici le message à envoyer"></textarea><br><br>
+                        <input type="submit" id="sendMessage" value="Envoyer">
+                    </form>
+                </article>
+            </section>
         </section>
     </main>
     <footer>
