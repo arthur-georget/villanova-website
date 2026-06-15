@@ -1,7 +1,9 @@
 # Villanova Website
 
 [![Normes WCAG](https://img.shields.io/badge/Accessibility-WCAG%20AA%20Compliant-brightgreen)](https://www.w3.org/WAI/standards-guidelines/wcag/)
-[![Licence](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![HTML](https://shields.io/badge/HTML-f06529?logo=html5&logoColor=white&labelColor=f06529)](HTML)
+[![SASS](https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white)](SASS)
+[![JavaScript](https://img.shields.io/badge/logo-javascript-blue?logo=javascript)](JAVASCRIPT)
 
 **Villanova Website** est une application web moderne permettant de consulter, rechercher et filtrer des événements et des lieux en temps réel. Le site interroge l'API publique d'**OpenAgenda** pour centraliser et afficher l'agenda culturel et associatif.
 
