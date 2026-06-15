@@ -29,6 +29,7 @@ async function showEventInfos(ref_button, event){
     EXIT_BUTTON.appendChild(EXIT_LOGO);
 
     const EVENT_NAME = document.createElement("h3");
+    EVENT_NAME.style.fontSize = "2rem";
     const EVENT_NAME_CONTENT = document.createTextNode(event.title['fr']);
     EVENT_NAME.appendChild(EVENT_NAME_CONTENT);
 
@@ -38,10 +39,12 @@ async function showEventInfos(ref_button, event){
     IMAGE.setAttribute("alt", `Illustration de ${event.title['fr']}`);
     
     const DATE_RANGE = document.createElement("p");
+    DATE_RANGE.style.fontSize = "1.5rem";
     const DATE_RANGE_CONTENT = document.createTextNode(event.dateRange["fr"]);
     DATE_RANGE.appendChild(DATE_RANGE_CONTENT);
 
     const LOCATION = document.createElement("p");
+    LOCATION.style.fontSize = "1.2rem";
     const LOCATION_CONTENT = document.createTextNode(`${event.location.name}, ${event.location.city}`);
     LOCATION.appendChild(LOCATION_CONTENT);
 

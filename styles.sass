@@ -195,20 +195,31 @@ a
         background: black
         opacity: 0.85
         z-index: 2
+            
     > article
         position: absolute
+        display: flex
+        flex-direction: column
+        align-items: center
         top: 0
         left: 0
         z-index: 3
+        padding: 5vw
         > button
             position: absolute
             background: none
             border: none
             box-shadow: none
             top: 0
-            right: 0
+            right: 2vw
+            transition: transform 0.2s ease, filter 0.2s ease
             > img
                 filter: $icons-bg-color
+                transition: filter 0.2s ease
+            &:hover
+                transform: scale(1.15)
+                > img
+                    filter: invert(1)
 
 @keyframes animatebottom
     from
@@ -391,6 +402,8 @@ ul
     .main-section
         width: 100%
         z-index: 1
+        > article > button
+            padding: 5px 10px
     
     footer
         display: flex

@@ -122,9 +122,13 @@ a:hover {
 }
 .main-section > article {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 0;
   left: 0;
   z-index: 3;
+  padding: 5vw;
 }
 .main-section > article > button {
   position: absolute;
@@ -132,10 +136,18 @@ a:hover {
   border: none;
   box-shadow: none;
   top: 0;
-  right: 0;
+  right: 2vw;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 .main-section > article > button > img {
   filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%);
+  transition: filter 0.2s ease;
+}
+.main-section > article > button:hover {
+  transform: scale(1.15);
+}
+.main-section > article > button:hover > img {
+  filter: invert(1);
 }
 
 @keyframes animatebottom {
@@ -353,6 +365,9 @@ ul {
   .main-section {
     width: 100%;
     z-index: 1;
+  }
+  .main-section > article > button {
+    padding: 5px 10px;
   }
   footer {
     display: flex;
