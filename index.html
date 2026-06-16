@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <script src="display-management.js" defer></script>
     <script src="content-management.js" defer></script>
@@ -20,7 +20,7 @@
 </head>
 <body>
     <header>
-        <a href="./index.html" aria-label="Recharger la page">
+        <a href="" aria-label="Recharger la page">
             <picture>
                 <source
                     srcset="assets/images/logo-small.webp"
@@ -41,13 +41,13 @@
             <input type="search" id="internalSearch" name="internalSearch" placeholder="Rechercher">
             <label for="internalSearch">Rechercher sur Villanova</label>
         </form>
-        <img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/>
-        <button onclick="toggleView()"><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Changement de mode d'affichage</p></button>
+        <img src="assets/icons/magnifying_glass.svg" alt="Logo loupe"/>
+        <button onclick="toggleView()"><img src="assets/icons/eye.svg" alt="Logo oeil"/><p>Changement de mode d'affichage</p></button>
     </header>
     <main>
         <section class="main-section" id="home" loading="lazy">
             <section id="home-section">
-                <img src="/assets/images/accueil.webp" alt="Photo de Villanova.">
+                <img src="assets/images/accueil.webp" alt="Photo de Villanova.">
                 <article>
                     <h3>Bienvenue sur Villanova!</h3>
                     <p> Le cœur battant de votre ville, en un clic. Que vous soyez un habitant de longue date, un nouvel arrivant ou un voyageur de passage, Villanova a toujours une histoire à vous raconter. Entre ses ruelles pavées baignées de lumière et l'effervescence de ses places ombragées, notre ville ne dort jamais vraiment. Villanova est la plateforme communautaire dédiée à tous ceux qui veulent vivre la ville intensément.</p>
@@ -96,11 +96,11 @@
     <footer>
         <nav class="mobile-footer-nav">
             <ul>
-                <li><button class="tab-link home-button selected-tab" onclick="openTab(event,'home')"><img src="/assets/icons/home.svg" alt="Logo accueil"/><p>Accueil</p></button></li>
-                <li><button class="tab-link events-button" onclick="openTab(event,'events')"><img src="/assets/icons/calendar.svg" alt="Logo calendrier"/><p>Événements</p></button></li>
-                <li><button class="tab-link search-button" onclick="searchFocus(event)"><img src="/assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
-                <li><button class="tab-link places-button"onclick="openTab(event,'places')"><img src="/assets/icons/location.svg" alt="Logo point de localisation"/><p>Où sortir</p></button></li>
-                <li><button><img src="/assets/icons/eye.svg" alt="Logo oeil"/><p>Affichage</p></button></li>
+                <li><button class="tab-link home-button selected-tab" onclick="openTab(event,'home')"><img src="assets/icons/home.svg" alt="Logo accueil"/><p>Accueil</p></button></li>
+                <li><button class="tab-link events-button" onclick="openTab(event,'events')"><img src="assets/icons/calendar.svg" alt="Logo calendrier"/><p>Événements</p></button></li>
+                <li><button class="tab-link search-button" onclick="searchFocus(event)"><img src="assets/icons/magnifying_glass.svg" alt="Logo loupe"/><p>Recherche</p></button></li>
+                <li><button class="tab-link places-button"onclick="openTab(event,'places')"><img src="assets/icons/location.svg" alt="Logo point de localisation"/><p>Où sortir</p></button></li>
+                <li><button><img src="assets/icons/eye.svg" alt="Logo oeil"/><p>Affichage</p></button></li>
             </ul>
         </nav>
         <nav class="desktop-footer-nav">
