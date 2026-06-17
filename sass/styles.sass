@@ -1,0 +1,238 @@
+@use 'foundation/colors'
+@use 'foundation/mixins'
+
+// Letter spacings
+$default-letter-spacing: normal
+$accessibility-spacing: 0.2rem
+
+button
+    @include mixins.atkinson-hyperlegible-regular
+    padding: 0
+    border: none
+    background: none
+    color: colors.$buttons-text-color
+    border-radius: 6px
+    padding: 5px 10px
+    > img
+        filter: colors.$icons-bg-color
+
+
+body
+    @include mixins.atkinson-hyperlegible-regular
+    background-color: colors.$bg-color
+    background-size: 100vw
+    color: colors.$text-color
+    display: flex
+    flex-direction: column
+    padding: 0 0
+    margin: 0
+    padding-bottom: 150px
+    > header
+        margin: 0
+        background-color: colors.$header-bg-color
+        display: flex
+        justify-content: flex-start
+        a   
+            @include mixins.flex-centered
+            color: colors.$a-color
+            text-decoration: none
+            text-rendering: geometricPrecision
+            
+            picture source
+                width: 4rem
+            picture img
+                width: 4rem
+        input
+            @include mixins.atkinson-hyperlegible-regular
+            position: absolute
+            top: 15px
+            right: 10px
+            width: 30vw
+            
+        > img
+            position: absolute
+            top: 25px
+            right: 15px
+            width: 20px
+            filter: colors.$icons-bg-color
+            pointer-events: none
+        > button
+            display: none
+        .desktop-barnav
+            display: none
+
+::placeholder
+    color: colors.$input-placeholder-color
+
+h1  
+    @include mixins.lexend-bold
+    all: unset
+    font-size: 5.7vw
+    color: colors.$text-color
+
+h2
+    padding-left: 5%
+
+a
+    text-decoration-line: none
+    color: colors.$a-color
+    &:hover
+        color: colors.$a-hover-color
+        cursor: pointer
+
+.title
+    display: block
+
+.main-section
+    background-color: colors.$main-bg-color
+    position: relative
+    animation: animatebottom 0.4s
+    display: flex
+    > div
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: black
+        opacity: 0.85
+        z-index: 2
+            
+    > article
+        position: absolute
+        display: flex
+        flex-direction: column
+        align-items: center
+        top: 0
+        left: 0
+        z-index: 3
+        padding: 5vw
+        > button
+            position: absolute
+            background: none
+            border: none
+            box-shadow: none
+            top: 0
+            right: 2vw
+            transition: transform 0.2s ease, filter 0.2s ease
+            > img
+                filter: colors.$icons-bg-color
+                transition: filter 0.2s ease
+            &:hover
+                transform: scale(1.15)
+                > img
+                    filter: invert(1)
+
+@keyframes animatebottom
+    from
+        left:-300px
+        opacity:0
+    to
+        left:0
+        opacity:1
+
+section > section
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    > button
+        padding: 0
+        border: none
+        background: none
+        box-shadow: none
+        > article
+            color: colors.$text-color
+            margin: 5vw
+            width: 300px
+            h3
+                padding-left: 5%
+    > img
+        width: 60vw
+    > article
+        position: relative
+        top: -5vw
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 5vw
+        background-color: colors.$home-article-background-color
+        
+        p
+            width: 40vw
+
+        > form
+            width: 50vw
+            input
+                width: 45vw
+            textarea
+                width: 45vw
+
+label
+    border: 0
+    clip: rect(0 0 0 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
+
+input
+    padding: 10px
+    border-radius: 6px
+    border: none
+    background-color: colors.$input-bg-color
+    color: colors.$text-color
+
+textarea
+    @include mixins.atkinson-hyperlegible-regular
+    padding: 10px
+    border-radius: 6px
+    border: none
+    background-color: colors.$input-bg-color
+    color: colors.$text-color
+
+#sendMessage
+    &:hover
+        cursor: pointer
+
+footer
+    background-color: colors.$footer-bg-color
+
+nav
+    background-color: colors.$nav-bg-color
+
+ul
+    list-style-type: none
+
+.mobile-footer-nav
+    display: block
+    position: fixed
+    bottom: 0
+    left: 0  
+    width: 100%
+    z-index: 5
+    flex-grow: 1
+    box-shadow: 0px 1px 3px
+    ul
+        display: flex
+        justify-content: space-evenly
+        padding-top: 5px 
+        padding-left: 8px
+        align-items: flex-end
+    p
+        color: colors.$text-color
+    img
+        width: 7vw
+        max-width: 40px
+
+.desktop-footer-nav
+    display: none
+
+.sources
+    display: none
+
+.selected-tab
+    background-color: colors.$buttons-hover-bg-color
+    color: colors.$buttons-hover-text-color
+    transition: 0.5s

@@ -1,0 +1,70 @@
+// Colors
+$off-white: #E6EEF5
+$light-cyan: #BFD4E6
+$light-cyan-filter: invert(88%) sepia(13%) saturate(420%) hue-rotate(171deg) brightness(95%) contrast(90%)
+$light-stl-blue: #1C3B52
+$light-stl-blue-filter: invert(17%) sepia(8%) saturate(5012%) hue-rotate(165deg) brightness(90%) contrast(84%)
+$stl-blue: #123247
+$dark-stl-blue: #0f2233
+$darkest-stl-blue: #0B1B2B
+$off-black: #050A14
+
+$bg-color: null
+$header-bg-color: null
+$main-bg-color: null
+$footer-bg-color: null
+$nav-bg-color: null
+$icons-bg-color: null
+$icons-bg-color: null
+$input-bg-color: null
+$input-placeholder-color: null
+$buttons-bg-color: null
+$buttons-shadow-color: null
+$buttons-text-color: null
+$buttons-hover-bg-color: null
+$buttons-hover-shadow-color: null
+$buttons-hover-text-color: null
+$home-article-background-color: null
+$text-color: null
+$a-color: null
+$a-hover-color: null
+
+$dark: true
+@if $dark
+    $bg-color: $off-black
+    $header-bg-color: $bg-color
+    $main-bg-color: $bg-color
+    $footer-bg-color: $bg-color
+    $nav-bg-color: $bg-color
+    $input-bg-color: $light-stl-blue
+    $input-placeholder-color: $light-cyan
+    $icons-bg-color: $light-cyan-filter
+    $buttons-bg-color: $light-cyan
+    $buttons-shadow-color: $light-stl-blue
+    $buttons-text-color: $off-black
+    $buttons-hover-bg-color: $light-stl-blue
+    $buttons-hover-shadow-color: $darkest-stl-blue
+    $buttons-hover-text-color: $off-white
+    $home-article-background-color: $darkest-stl-blue
+    $text-color: $light-cyan
+    $a-color: $off-white
+    $a-hover-color: $light-cyan
+@else 
+    $bg-color: $off-white
+    $header-bg-color: $bg-color
+    $main-bg-color: $bg-color
+    $footer-bg-color: $bg-color
+    $nav-bg-color: $bg-color
+    $input-bg-color: $light-cyan
+    $input-placeholder-color: $light-stl-blue
+    $icons-bg-color: $light-stl-blue-filter
+    $buttons-bg-color: $light-stl-blue
+    $buttons-shadow-color: $darkest-stl-blue
+    $buttons-text-color: $off-white
+    $buttons-hover-bg-color: $stl-blue
+    $buttons-hover-shadow-color: $darkest-stl-blue
+    $buttons-hover-text-color: $light-cyan
+    $home-article-background-color: $light-cyan
+    $text-color: $off-black
+    $a-color: $off-black
+    $a-hover-color: $dark-stl-blue

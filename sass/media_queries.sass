@@ -1,0 +1,97 @@
+@use 'foundation/colors'
+
+@media screen and (min-width: 550px)
+    h1
+        font-size: 2rem                
+
+@media screen and (min-width: 900px)
+    button
+        margin-left: 20px
+        padding: 10px 20px
+        background-color: colors.$buttons-bg-color
+        color: colors.$buttons-text-color
+        border-radius: 6px
+        box-shadow: 0px 4px 0px colors.$buttons-shadow-color
+        &:hover
+            cursor: pointer
+            background-color: colors.$buttons-hover-bg-color
+            box-shadow: 0px 4px 0px colors.$buttons-hover-shadow-color
+            color: colors.$buttons-hover-text-color
+
+    body
+        align-items: center
+        padding-bottom: 0px
+        > header
+            position: sticky
+            top: 0
+            z-index: 2
+            width: 100%
+            box-shadow: 0px 0px 3px
+            .desktop-barnav
+                display: block
+                ul
+                    display: flex
+            input
+                width: 13vw
+                top: 15px
+                right: 50px
+            > img
+                top: 25px
+                right: 55px
+
+            > button
+                display: block
+                position: absolute
+                top: 25px
+                right: 15px
+                width: 20px
+                padding: 0
+                border: none
+                background: none
+                box-shadow: none
+                &:hover
+                    background: none
+                    box-shadow: none
+                    filter: brightness(150%)
+                > p                
+                    position: absolute
+                    width: 1px
+                    height: 1px
+                    padding: 0
+                    margin: -1px
+                    overflow: hidden
+                    clip: rect(0, 0, 0, 0)
+                    border: 0
+                    white-space: nowrap
+     
+    .main-section
+        width: 100%
+        z-index: 1
+        > article > button
+            padding: 5px 10px
+    
+    footer
+        display: flex
+        justify-content: center
+        z-index: 1
+        width: 100%
+
+    .desktop-footer-nav
+        display: block
+        > ul
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+
+    .sources
+        display: block
+
+    .mobile-footer-nav
+        display: none
+
+@media screen and (min-width: 1000px)
+    body
+        > header
+            input
+                width: 20vw
+                max-width: 300px
