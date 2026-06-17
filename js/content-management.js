@@ -7,7 +7,10 @@ let isLoading = false;
 async function showEventInfos(ref_button, event){
     const CURTAIN = document.createElement("div");
     document.getElementById('events').appendChild(CURTAIN);
-    
+
+    CURTAIN.setAttribute("tabindex", "1");
+    CURTAIN.focus();
+
     const LOADER = document.createElement("p");
     const LOADER_CONTENT = document.createTextNode("Chargement...");
     LOADER.appendChild(LOADER_CONTENT);
@@ -26,7 +29,9 @@ async function showEventInfos(ref_button, event){
     const EVENT = document.createElement("article");
 
     const EXIT_BUTTON = document.createElement("button");
-    EXIT_BUTTON.setAttribute("tabindex", "1");
+    EXIT_BUTTON.setAttribute("tabindex", "6");
+    EXIT_BUTTON.setAttribute("aria-label", "Fermer les détails de l'évènement.");
+
 
     EXIT_BUTTON.addEventListener('click', () => {
                 CURTAIN.remove();
@@ -40,6 +45,7 @@ async function showEventInfos(ref_button, event){
     EXIT_BUTTON.appendChild(EXIT_LOGO);
 
     const EVENT_NAME = document.createElement("h3");
+    EVENT_NAME.setAttribute("tabindex", "2");
     EVENT_NAME.style.fontSize = "2rem";
     const EVENT_NAME_CONTENT = document.createTextNode(event.title['fr']);
     EVENT_NAME.appendChild(EVENT_NAME_CONTENT);
@@ -50,16 +56,19 @@ async function showEventInfos(ref_button, event){
     IMAGE.setAttribute("alt", `Illustration de ${event.title['fr']}`);
     
     const DATE_RANGE = document.createElement("p");
+    DATE_RANGE.setAttribute("tabindex", "3");
     DATE_RANGE.style.fontSize = "1.5rem";
     const DATE_RANGE_CONTENT = document.createTextNode(event.dateRange["fr"]);
     DATE_RANGE.appendChild(DATE_RANGE_CONTENT);
 
     const LOCATION = document.createElement("p");
+    LOCATION.setAttribute("tabindex", "4");
     LOCATION.style.fontSize = "1.2rem";
     const LOCATION_CONTENT = document.createTextNode(`${event.location.name}, ${event.location.city}`);
     LOCATION.appendChild(LOCATION_CONTENT);
 
     const LONG_DESCRIPTION = document.createElement("p");
+    LONG_DESCRIPTION.setAttribute("tabindex", "5");
     const LONG_DESCRIPTION_CONTENT = document.createTextNode(DATA.event.longDescription["fr"])
     LONG_DESCRIPTION.appendChild(LONG_DESCRIPTION_CONTENT);
 
@@ -69,7 +78,7 @@ async function showEventInfos(ref_button, event){
     EVENT.appendChild(DATE_RANGE);
     EVENT.appendChild(LOCATION);
     EVENT.appendChild(LONG_DESCRIPTION);
-
+    
     document.getElementById('events').appendChild(EVENT);
     LOADER.remove();
 }
