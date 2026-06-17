@@ -5,13 +5,24 @@ let data;
 let isLoading = false;
 
 async function showEventInfos(ref_button, event){
+    const CURTAIN = document.createElement("div");
+    document.getElementById('events').appendChild(CURTAIN);
+    
+    const LOADER = document.createElement("p");
+    const LOADER_CONTENT = document.createTextNode("Chargement...");
+    LOADER.appendChild(LOADER_CONTENT);
+
+    CURTAIN.appendChild(LOADER);
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
     let target_url = `https://api.openagenda.com/v2/agendas/${AGENDA_ID}/events/${event.uid}?key=${PUBLIC_KEY}`;
     const RESPONSE = await fetch(target_url);
 
     const DATA = await RESPONSE.json();
     console.log(DATA);
 
-    const CURTAIN = document.createElement("div");
     const EVENT = document.createElement("article");
 
     const EXIT_BUTTON = document.createElement("button");
@@ -59,11 +70,8 @@ async function showEventInfos(ref_button, event){
     EVENT.appendChild(LOCATION);
     EVENT.appendChild(LONG_DESCRIPTION);
 
-    document.getElementById('events').appendChild(CURTAIN);
     document.getElementById('events').appendChild(EVENT);
-    
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    LOADER.remove();
 }
 
 async function requestEvents(after="", search="") {
